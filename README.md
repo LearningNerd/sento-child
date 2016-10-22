@@ -5,9 +5,10 @@ Girl Develop It LA volunteer project to build a website for New Hearts Recovery 
 
 ### Team:
 - Project Manager: Liz Krane
+- Mentor: Jim Thoburn
 - Graphic Design: Kat Reilly
 - UX Design: Saneeya Khan
-- Content: Roberta Romero (Sunday only)
+- Content: Roberta Romero (Sunday only), Wafic (Saturday only)
 - Lead Dev: Liz Krane
 - Dev: Michelle Rodriguez
 - Dev: Marsha Swallow

@@ -1,6 +1,3 @@
-/*
-Theme Name: Sento Child Theme
-Template: sento
-
-*/
-background-color: red;
+/* line 1, sass/style.scss */
+body {
+  color: red; }

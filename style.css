@@ -5,28 +5,28 @@ body {
   font-weight: 400;
   font-size: 2rem; }
 
-/* line 8, sass/style.scss */
+/* line 9, sass/style.scss */
 h1 {
   color: #013045;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
   font-size: 3rem; }
 
-/* line 15, sass/style.scss */
+/* line 16, sass/style.scss */
 h2, h3 {
   color: #013045;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   font-size: 2.3rem; }
 
-/* line 22, sass/style.scss */
+/* line 23, sass/style.scss */
 h4 {
   color: #013045;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   font-size: 2.1rem; }
 
-/* line 29, sass/style.scss */
+/* line 30, sass/style.scss */
 a {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;

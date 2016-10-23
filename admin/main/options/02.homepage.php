@@ -73,13 +73,13 @@ $slider_toggle           = NULL;
 			echo '<div id="slider"><div id="slider-core">',
 			     '<div class="rslides-container"><div class="rslides-inner"><ul class="slides">';
 				if ( empty( $slider_toggle ) ) {		 
-					echo '<li><img src="' . esc_url( get_template_directory_uri() ) . '/images/transparent.png" style="background: url(' . esc_url( get_template_directory_uri() ) . '/images/slideshow/slide_demo1.png) no-repeat center; background-size: cover;" alt="Demo Image" /></li>';
-					echo '<li><img src="' . esc_url( get_template_directory_uri() ) . '/images/transparent.png" style="background: url(' . esc_url( get_template_directory_uri() ) . '/images/slideshow/slide_demo2.png) no-repeat center; background-size: cover;" alt="Demo Image" /></li>';
-					echo '<li><img src="' . esc_url( get_template_directory_uri() ) . '/images/transparent.png" style="background: url(' . esc_url( get_template_directory_uri() ) . '/images/slideshow/slide_demo3.png) no-repeat center; background-size: cover;" alt="Demo Image" /></li>';
+					echo '<li><img src="' . esc_url( get_stylesheet_directory_uri() ) . '/images/transparent.png" style="background: url(' . esc_url( get_stylesheet_directory_uri() ) . '/images/slideshow/slide_demo1.png) no-repeat center; background-size: cover;" alt="Demo Image" /></li>';
+					echo '<li><img src="' . esc_url( get_stylesheet_directory_uri() ) . '/images/transparent.png" style="background: url(' . esc_url( get_stylesheet_directory_uri() ) . '/images/slideshow/slide_demo2.png) no-repeat center; background-size: cover;" alt="Demo Image" /></li>';
+					echo '<li><img src="' . esc_url( get_stylesheet_directory_uri() ) . '/images/transparent.png" style="background: url(' . esc_url( get_stylesheet_directory_uri() ) . '/images/slideshow/slide_demo3.png) no-repeat center; background-size: cover;" alt="Demo Image" /></li>';
 				} else if (isset($thinkup_homepage_sliderpreset) && is_array($thinkup_homepage_sliderpreset)) {
 					foreach ($thinkup_homepage_sliderpreset as $slide) {
 						echo '<li>',
-							 '<img src="' . get_template_directory_uri() . '/images/transparent.png" style="background: url(' . $slide['slide_image_url'] . ') no-repeat center; background-size: cover;" alt="' . $slide['slide_title']. '" />',
+							 '<img src="' . get_stylesheet_directory_uri() . '/images/transparent.png" style="background: url(' . $slide['slide_image_url'] . ') no-repeat center; background-size: cover;" alt="' . $slide['slide_title']. '" />',
 							 '<div class="rslides-content">',
 							 '<div class="wrap-safari">',
 							 '<div class="rslides-content-inner">',
@@ -230,7 +230,7 @@ global $thinkup_homepage_section3_link;
 					'<div class="section">',
 					'<div class="entry-header">';
 					if ( empty( $thinkup_homepage_section1_image ) ) {
-						echo '<img src="' . get_template_directory_uri() . '/images/slideshow/featured1.png' . '" />';
+						echo '<img src="' . get_stylesheet_directory_uri() . '/images/slideshow/featured1.png' . '" />';
 					} else {
 						if ( ! empty( $thinkup_homepage_section1_link ) ) {
 							echo '<a href="' . esc_url( $thinkup_homepage_section1_link ) . '"><img src="' . esc_url( $thinkup_homepage_section1_image[0] ) . '" /></a>';
@@ -251,7 +251,7 @@ global $thinkup_homepage_section3_link;
 					'<div class="section">',
 					'<div class="entry-header">';
 					if ( empty( $thinkup_homepage_section2_image ) ) {
-						echo '<img src="' . get_template_directory_uri() . '/images/slideshow/featured2.png' . '" />';
+						echo '<img src="' . get_stylesheet_directory_uri() . '/images/slideshow/featured2.png' . '" />';
 					} else {
 						if ( ! empty( $thinkup_homepage_section2_link ) ) {
 							echo '<a href="' . esc_url( $thinkup_homepage_section2_link ) . '"><img src="' . esc_url( $thinkup_homepage_section2_image[0] ) . '" /></a>';
@@ -273,7 +273,7 @@ global $thinkup_homepage_section3_link;
 					'<div class="section">',
 					'<div class="entry-header">';
 					if ( empty( $thinkup_homepage_section3_image ) ) {
-						echo '<img src="' . get_template_directory_uri() . '/images/slideshow/featured3.png' . '" />';
+						echo '<img src="' . get_stylesheet_directory_uri() . '/images/slideshow/featured3.png' . '" />';
 					} else {
 						if ( ! empty( $thinkup_homepage_section3_link ) ) {
 							echo '<a href="' . esc_url( $thinkup_homepage_section3_link ) . '"><img src="' . esc_url( $thinkup_homepage_section3_image[0] ) . '" /></a>';

@@ -14,27 +14,27 @@ if ( ! isset( $content_width ) )
 //----------------------------------------------------------------------------------
 
 	// Add Redux Framework
-	//require_once( get_template_directory() . '/admin/main/framework.php' );
-	require_once( '/admin/main/framework.php' );
-	//require_once( get_template_directory() . '/admin/main/options.php' );
-	require_once( '/admin/main/options.php' );
-	require_once( '/admin/main-extensions/extensions-init.php' );
-	//require_once( get_template_directory() . '/admin/main-extensions/extensions-init.php' );
+	//require_once( get_stylesheet_directory() . '/admin/main/framework.php' );
+	require_once( get_stylesheet_directory() . '/admin/main/framework.php' );
+	//require_once( get_stylesheet_directory() . '/admin/main/options.php' );
+	require_once( get_stylesheet_directory() .  '/admin/main/options.php' );
+	require_once( get_stylesheet_directory() .  '/admin/main-extensions/extensions-init.php' );
+	//require_once( get_stylesheet_directory() . '/admin/main-extensions/extensions-init.php' );
 
 	// Add Notice Informing Users Theme Options Have Moved To Customizer
-	require_once( '/admin/main/customizer_migration_notice/customizer_migration_notice.php' );
+	require_once( get_stylesheet_directory() .  '/admin/main/customizer_migration_notice/customizer_migration_notice.php' );
 
 	// Load Theme Variables.
-	require_once( '/admin/main/options/00.variables.php' ); 
+	require_once( get_stylesheet_directory() .  '/admin/main/options/00.variables.php' ); 
 
 	// Add Theme Options Features.
-	require_once( '/admin/main/options/00.theme-setup.php' ); 
-	require_once( '/admin/main/options/01.general-settings.php' ); 
-	require_once( '/admin/main/options/02.homepage.php' ); 
-	require_once( '/admin/main/options/03.header.php' ); 
-	require_once( '/admin/main/options/04.footer.php' );
-	require_once( '/admin/main/options/05.blog.php' ); 
-	require_once( '/admin/main/options/08.special-pages.php' ); 
+	require_once( get_stylesheet_directory() .  '/admin/main/options/00.theme-setup.php' ); 
+	require_once( get_stylesheet_directory() .  '/admin/main/options/01.general-settings.php' ); 
+	require_once( get_stylesheet_directory() .  '/admin/main/options/02.homepage.php' ); 
+	require_once( get_stylesheet_directory() .  '/admin/main/options/03.header.php' ); 
+	require_once( get_stylesheet_directory() .  '/admin/main/options/04.footer.php' );
+	require_once( get_stylesheet_directory() .  '/admin/main/options/05.blog.php' ); 
+	require_once( get_stylesheet_directory() . '/admin/main/options/08.special-pages.php' ); 
 
 //----------------------------------------------------------------------------------
 //	Assign Theme Specific Functions
@@ -46,8 +46,8 @@ if ( ! function_exists( 'thinkup_themesetup' ) ) {
 	function thinkup_themesetup() {
 
 		// Load required files
-		require_once ( '/lib/functions/extras.php' );
-		require_once ( '/lib/functions/template-tags.php' );
+		require_once( get_stylesheet_directory() .  '/lib/functions/extras.php' );
+		require_once( get_stylesheet_directory() .  '/lib/functions/template-tags.php' );
 
 		// Make theme translation ready.
 		load_theme_textdomain( 'sento', '/languages' );
@@ -87,34 +87,34 @@ function thinkup_frontscripts() {
 	wp_enqueue_script('jquery');
 
 	// Register theme stylesheets.
-	wp_register_style( 'thinkup-responsive', '/styles/style-responsive.css', '', '1.1' );
-	wp_register_style( 'thinkup-sidebarleft', '/styles/layouts/thinkup-left-sidebar.css', '', '1.1' );
-	wp_register_style( 'thinkup-sidebarright', '/styles/layouts/thinkup-right-sidebar.css', '', '1.1' );
+	wp_register_style( 'thinkup-responsive', get_stylesheet_directory_uri() .'/styles/style-responsive.css', '', '1.1' );
+	wp_register_style( 'thinkup-sidebarleft', get_stylesheet_directory_uri() .'/styles/layouts/thinkup-left-sidebar.css', '', '1.1' );
+	wp_register_style( 'thinkup-sidebarright', get_stylesheet_directory_uri() .'/styles/layouts/thinkup-right-sidebar.css', '', '1.1' );
 
 	// Add theme stylesheets.
-	wp_enqueue_style( 'thinkup-bootstrap', '/lib/extentions/bootstrap/css/bootstrap.css', '', '2.3.2' );
-	wp_enqueue_style( 'thinkup-prettyPhoto', '/lib/extentions/prettyPhoto/css/prettyPhoto.css', '', '3.1.6' );
-	wp_enqueue_style( 'thinkup-shortcodes', '/styles/style-shortcodes.css', '', '1.1' );
+	wp_enqueue_style( 'thinkup-bootstrap', get_stylesheet_directory_uri() . '/lib/extentions/bootstrap/css/bootstrap.css', '', '2.3.2' );
+	wp_enqueue_style( 'thinkup-prettyPhoto', get_stylesheet_directory_uri() . '/lib/extentions/prettyPhoto/css/prettyPhoto.css', '', '3.1.6' );
+	wp_enqueue_style( 'thinkup-shortcodes', get_stylesheet_directory_uri() . '/styles/style-shortcodes.css', '', '1.1' );
 	wp_enqueue_style( 'thinkup-style', get_stylesheet_uri(), '', '1.1.15' );
 
 	// Add Font Packages and Google Fonts
 	wp_enqueue_style( 'our-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:300,400|Ubuntu:300,400,500');
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( 'thinkup-font-awesome', '/lib/extentions/font-awesome/css/font-awesome.css', '', '4.2.0' );
+	wp_enqueue_style( 'thinkup-font-awesome', get_stylesheet_directory_uri() . '/lib/extentions/font-awesome/css/font-awesome.css', '', '4.2.0' );
 
 	// Add theme scripts
-	wp_enqueue_script( 'thinkup-imagesloaded', '/lib/scripts/plugins/imagesloaded/imagesloaded.js', array( 'jquery' ), '1.3.4', true );
-	wp_enqueue_script( 'thinkup-prettyPhoto', ( '/lib/extentions/prettyPhoto/js/jquery.prettyPhoto.js' ), array( 'jquery' ), '3.1.6', 'true' );
-	wp_enqueue_script( 'thinkup-frontend', '/lib/scripts/main-frontend.js', array( 'jquery' ), '1.1', 'true'  );
-	wp_enqueue_script( 'thinkup-bootstrap', '/lib/extentions/bootstrap/js/bootstrap.js', array( 'jquery' ), '2.3.2', 'true'  );
-	wp_enqueue_script( 'thinkup-modernizr', '/lib/scripts/modernizr.js', array( 'jquery' ), '2.6.2', 'true'  );
+	wp_enqueue_script( 'thinkup-imagesloaded', get_stylesheet_directory_uri() . '/lib/scripts/plugins/imagesloaded/imagesloaded.js', array( 'jquery' ), '1.3.4', true );
+	wp_enqueue_script( 'thinkup-prettyPhoto', ( get_stylesheet_directory_uri() . '/lib/extentions/prettyPhoto/js/jquery.prettyPhoto.js' ), array( 'jquery' ), '3.1.6', 'true' );
+	wp_enqueue_script( 'thinkup-frontend', get_stylesheet_directory_uri() . '/lib/scripts/main-frontend.js', array( 'jquery' ), '1.1', 'true'  );
+	wp_enqueue_script( 'thinkup-bootstrap', get_stylesheet_directory_uri() . '/lib/extentions/bootstrap/js/bootstrap.js', array( 'jquery' ), '2.3.2', 'true'  );
+	wp_enqueue_script( 'thinkup-modernizr', get_stylesheet_directory_uri() . '/lib/scripts/modernizr.js', array( 'jquery' ), '2.6.2', 'true'  );
 
 	// Register Retina script - Enqueued in 01.general-settings.php
-	wp_register_script( 'thinkup-retina', '/lib/scripts/retina.js', array( 'jquery' ), '0.0.2', '', true );
+	wp_register_script( 'thinkup-retina', get_stylesheet_directory_uri() . '/lib/scripts/retina.js', array( 'jquery' ), '0.0.2', '', true );
 
 	// Add Masonry script to all archive pages
 	if ( thinkup_check_isblog() or is_page_template( 'template-blog.php' ) or is_archive() ) {
-		wp_enqueue_script( 'thinkup-masonry', '/lib/scripts/plugins/masonry/masonry.js', array( 'jquery' ), '3.1.2', true );
+		wp_enqueue_script( 'thinkup-masonry', get_stylesheet_directory_uri() . '/lib/scripts/plugins/masonry/masonry.js', array( 'jquery' ), '3.1.2', true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -123,8 +123,8 @@ function thinkup_frontscripts() {
 
 	// Add ThinkUpSlider scripts
 	if ( is_front_page() or thinkup_check_ishome() ) {
-		wp_enqueue_script( 'thinkup-slider', '/lib/scripts/plugins/ResponsiveSlides/responsiveslides.js', array( 'jquery' ), '1.54', 'true' );
-		wp_enqueue_script( 'thinkup-slider-call', '/lib/scripts/plugins/ResponsiveSlides/responsiveslides-call.js', array( 'jquery' ), '', 'true' );
+		wp_enqueue_script( 'thinkup-slider', get_stylesheet_directory_uri() . '/lib/scripts/plugins/ResponsiveSlides/responsiveslides.js', array( 'jquery' ), '1.54', 'true' );
+		wp_enqueue_script( 'thinkup-slider-call', get_stylesheet_directory_uri() . '/lib/scripts/plugins/ResponsiveSlides/responsiveslides-call.js', array( 'jquery' ), '', 'true' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'thinkup_frontscripts', 10 );
@@ -137,11 +137,11 @@ add_action( 'wp_enqueue_scripts', 'thinkup_frontscripts', 10 );
 function thinkup_adminscripts() {
 
 	// Register theme stylesheets.
-	wp_register_style( 'thinkup-backend', '/styles/backend/style-backend.css', '', 1.1 );
-	wp_register_style( 'thinkup-font-awesome-backend', '/lib/extentions/font-awesome/css/font-awesome.css', '', '4.2.0' );
+	wp_register_style( 'thinkup-backend', get_stylesheet_directory_uri() . '/styles/backend/style-backend.css', '', 1.1 );
+	wp_register_style( 'thinkup-font-awesome-backend', get_stylesheet_directory_uri() . '/lib/extentions/font-awesome/css/font-awesome.css', '', '4.2.0' );
 
 	// Register theme scripts.
-	wp_register_script( 'thinkup-backend', '/lib/scripts/main-backend.js', array( 'jquery' ), '1.1' );
+	wp_register_script( 'thinkup-backend', get_stylesheet_directory_uri() . '/lib/scripts/main-backend.js', array( 'jquery' ), '1.1' );
 
 		// Add theme stylesheets.
 		wp_enqueue_style( 'thinkup-backend' );

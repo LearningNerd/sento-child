@@ -8,7 +8,7 @@
  */
 ?><!DOCTYPE html>
 
-<html <?php language_attributes(); ?>>
+<html class="override-inline" <?php language_attributes(); ?>>
 <head>
 <?php thinkup_hook_header(); ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />

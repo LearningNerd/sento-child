@@ -7093,6 +7093,6 @@ a {
   font-weight: 500;
   text-decoration: none; }
 
-/* line 36, sass/style.scss */
-html {
+/* line 6364, sass/style.scss */
+html.override-inline {
   margin-top: 0px !important; }

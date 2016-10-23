@@ -23,7 +23,7 @@
 		<div id="sub-footer-core">
 		
 			<div class="copyright">
-			<?php /* === Add custom footer === */ thinkup_input_copyright(); ?>
+				Copyright &copy; <a href="<?php echo esc_url( home_url() );?>">New Hearts Recovery Network</a> <?php echo date("Y") ?>. Powered by <a href="//www.wordpress.org/" target="_blank">WordPress</a>.
 			</div>
 			<!-- .copyright -->
 

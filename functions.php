@@ -9,7 +9,7 @@ add_action( 'wp_enqueue_scripts', 'sento_child_enqueue_styles' );
 // Enqueue Google fonts
 function sento_child_add_google_fonts() {
 
-wp_enqueue_style( 'sento_child-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans|Ubuntu', false ); 
+wp_enqueue_style( 'sento_child-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:300,400|Ubuntu:300,400,500', false ); 
 }
 add_action( 'wp_enqueue_scripts', 'sento_child_add_google_fonts' );
 
